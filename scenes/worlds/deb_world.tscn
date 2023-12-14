@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://c22qcrpqlsrla"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_76adl"]
+size = Vector3(5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwgif"]
+albedo_color = Color(0.0470588, 0.243137, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_itc8b"]
+material = SubResource("StandardMaterial3D_dwgif")
+size = Vector3(20, 0.5, 20)
+
+[node name="DebWorld" type="Node3D"]
+metadata/LightEnergy = 0.0
+metadata/VolumetricFog = false
+metadata/Index = -1
+
+[node name="Step" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_76adl")
+
+[node name="Step2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.5)
+mesh = SubResource("BoxMesh_76adl")
+
+[node name="Step3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+mesh = SubResource("BoxMesh_76adl")
+
+[node name="Step4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.5)
+mesh = SubResource("BoxMesh_76adl")
+
+[node name="Step5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
+mesh = SubResource("BoxMesh_76adl")
+
+[node name="Step6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -2.5)
+mesh = SubResource("BoxMesh_76adl")
+
+[node name="Step7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3)
+mesh = SubResource("BoxMesh_76adl")
+
+[node name="Step8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -3.5)
+mesh = SubResource("BoxMesh_76adl")
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -13.7)
+mesh = SubResource("BoxMesh_itc8b")
